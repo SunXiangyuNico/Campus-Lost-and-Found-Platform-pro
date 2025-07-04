@@ -1,0 +1,39 @@
+{
+  "name": "campus-lost-and-found-platform-pro",
+  "version": "1.0.0",
+  "description": "校园失物招领平台 - 一个帮助师生找回失物的便民平台",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd Frontend/Frontend && npm run dev",
+    "dev:backend": "cd backend && python app.py",
+    "dev:mock": "cd Frontend/Frontend && node mock-server.cjs",
+    "install:frontend": "cd Frontend/Frontend && npm install",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "install:all": "npm run install:frontend && npm run install:backend",
+    "build:frontend": "cd Frontend/Frontend && npm run build",
+    "test:mock": "npm run dev:mock",
+    "start": "npm run dev",
+    "setup": "echo '正在安装项目依赖...' && npm run install:all && echo '项目依赖安装完成！'"
+  },
+  "keywords": [
+    "失物招领",
+    "校园",
+    "Vue.js",
+    "Flask",
+    "失物平台"
+  ],
+  "author": "Campus Lost and Found Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SunXiangyuNico/Campus-Lost-and-Found-Platform-pro.git"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+} 
